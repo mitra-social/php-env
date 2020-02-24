@@ -24,7 +24,7 @@ final class DelegateReader implements ReaderInterface
     public function read(string $varname): ?string
     {
         foreach ($this->readers as $reader) {
-            if (null !== $value = $reader->get($varname)) {
+            if (null !== $value = $reader->read($varname)) {
                 return $value;
             }
         }
