@@ -41,7 +41,8 @@ You can tell `Env` where to read environment variables from by providing a reade
 * `GetenvReader`: Reads using PHP's `getenv()` function
 * `EnvVarReader`: Reads using PHP's global `$_ENV` variable
 * `DelegateReader`: Accepts an array of readers, iterates over them and returns the value of the first reader that can
-                    provider the value.
+                    provider the value
+* `ArrayReader`: Reads from a given PHP array
 
 You can write own readers by implementing the `Env\Reader\ReaderInterface` interface.
 
